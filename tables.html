@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table and Chatbot</title>
+    <link rel="stylesheet" href="styles-table.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo"><img src="./pictures/logo.png" alt="logo"></div>
+        <ul class="menu">
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="tables.html">Weather Table</a></li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <div class="top-bar">
+          <input type="text" class="search-bar" placeholder="Enter city name" />
+          <button class="get-weather-btn">Get Weather</button>
+          <div class="user-profile">👤</div>
+        </div>
+
+        <div class="content-section">
+          <div class="table-section">
+            <h2>Weather Table</h2>
+            <table id="weather-forecast-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>
+                    Temperature (°C)
+                    <select id="temp-filter">
+                      <option value="none">No Filter</option>
+                      <option value="asc">Ascending</option>
+                      <option value="desc">Descending</option>
+                      <option value="highest">Highest Temperature</option>
+                    </select>
+                  </th>
+                  <th>
+                    Weather
+                    <select id="weather-filter">
+                      <option value="all">All Weather</option>
+                      <option value="rain">Rainy Days</option>
+                    </select>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <div class="pagination">
+              <button id="prev-btn" disabled>Previous</button>
+              <span id="page-info">Page 1</span>
+              <button id="next-btn">Next</button>
+            </div>
+          </div>
+
+          <div class="chat-section">
+            <h3>Chatbot</h3>
+            <div class="chat-bar">
+              <input
+                type="text"
+                placeholder="Ask something..."
+                class="chat-input"
+              />
+              <button class="chat-btn">Send</button>
+            </div>
+            <div class="chat-answer">Answer area for chatbot</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="tablescript.js"></script>
+  </body>
+</html>

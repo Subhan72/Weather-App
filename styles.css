@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #1e1f26;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 22%;
+}
+
+.logo {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .logo img {
+    max-width: 100px; 
+    height: auto; 
+    border-radius: 10px; 
+  }
+
+.menu {
+    list-style: none;
+    width: 100%;
+}
+
+.menu li {
+    margin: 25px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #2d2e38;
+}
+
+.main-content {
+    width: 80%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.get-weather-btn {
+    padding: 15px 30px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.get-weather-btn:hover {
+    background-color: #ff4500;
+}
+
+.user-profile {
+    background-color: #4b4c57;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-widget {
+    background-color: #87ceeb;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.weather-widget:hover {
+    background-color: #00aaff;
+}
+
+.weather-widget img {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.forecast-widget {
+    margin-bottom: 40px;
+}
+
+#forecast-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.forecast-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-card img {
+    width: 60px;
+    height: 60px;
+}
+
+.charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.chart {
+    width: 32%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.chart h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+    .chart {
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .chart {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .get-weather-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
